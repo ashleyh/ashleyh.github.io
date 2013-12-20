@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+<style type="text/css">
+div { text-align: center; font-family: monospace; }
+</style>
+</head>
+<body>
+<div id="m">
+  site at ashleyh dot eu
+</div>
+<div>
+  <a href="https://github.com/ashleyh">github.com/ashleyh</a>
+</div>
+<script type="text/javascript">
+var a='<a href="mailto:spam">spam</a>',
+    m=document.querySelector("#m");
+if (m) {
+  m.innerHTML=a.replace(/spam/g,
+    (m.textContent||m.innerText).replace(/ at /,'@').replace(/ dot /,'.').replace(/\s/g, '')
+  );
+}
+</script>
+</body>
+</html>
